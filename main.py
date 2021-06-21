@@ -11,6 +11,8 @@ from time import sleep
 import os
 import io
 
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="/home/pi/Downloads/cognitio-7378d-f0c72d841d75.json"
+
 camera = PiCamera()
 camera.rotation = 180
 
