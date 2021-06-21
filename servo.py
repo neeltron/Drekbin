@@ -21,7 +21,7 @@ def servoAngle(angle):
 
 GPIO.setmode(GPIO.BOARD)
 
-GPIO.setup(2, GPIO.BMC)
+GPIO.setup(2, GPIO.BCM)
 p = GPIO.PWM(2, 50)
 p.start(0)
 servoAngle(90)
