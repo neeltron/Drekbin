@@ -19,6 +19,8 @@ def servoAngle(angle):
     
 
 
+GPIO.setmode(GPIO.BOARD)
+
 GPIO.setup(2, GPIO.OUT)
 p = GPIO.PWM(2, 50)
 p.start(0)
