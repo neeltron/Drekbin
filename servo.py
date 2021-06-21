@@ -11,16 +11,16 @@ from time import sleep
 
 def servoAngle(angle):
 	duty = angle / 18 + 2
-	GPIO.output(11, True)
+	GPIO.output(2, True)
 	p.ChangeDutyCycle(duty)
 	sleep(1)
-	GPIO.output(11, False)
+	GPIO.output(2, False)
 	p.ChangeDutyCycle(0)
     
 
 
-GPIO.setup(11, GPIO.OUT)
-p = GPIO.PWM(11, 50)
+GPIO.setup(2, GPIO.OUT)
+p = GPIO.PWM(2, 50)
 p.start(0)
 servoAngle(90)
 sleep(2)
