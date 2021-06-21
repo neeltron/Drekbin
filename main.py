@@ -33,4 +33,6 @@ sleep(5)
 camera.capture('a.jpg')
 
 s = detect("a.jpg")
+for i in s:
+    print(i.description)
 print(s)
