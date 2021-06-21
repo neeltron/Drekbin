@@ -44,15 +44,21 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(2, GPIO.OUT)
 p = GPIO.PWM(2, 50)
 p.start(0)
+servoAngle(90)
 
 camera = PiCamera()
 camera.rotation = 180
 
 camera.start_preview()
 sleep(5)
-camera.capture('a.jpg')
-
-s = detect("a.jpg")
-for i in s:
-    print(i.description)
+while True:
+    sleep(5)
+    camera.capture('a.jpg')
+    s = detect("a.jpg")
+    for i in s:
+        print(i.description)
+        if i.description == 'Drinkware':
+            servoAngle(0)
+        else:
+            servoAngle(180)
     
