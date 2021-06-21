@@ -31,3 +31,6 @@ camera.rotation = 180
 camera.start_preview()
 sleep(5)
 camera.capture('a.jpg')
+
+s = detect("a.jpg")
+print(s)
