@@ -61,4 +61,7 @@ while True:
             servoAngle(0)
         else:
             servoAngle(180)
+        
+        sleep(2)
+        servoAngle(90)
     
