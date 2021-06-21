@@ -52,7 +52,6 @@ camera.rotation = 180
 camera.start_preview()
 sleep(5)
 while True:
-    sleep(5)
     camera.capture('a.jpg')
     s = detect("a.jpg")
     for i in s:
@@ -64,4 +63,5 @@ while True:
         
         sleep(2)
         servoAngle(90)
+        sleep(5)
     
